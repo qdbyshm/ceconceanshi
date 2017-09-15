@@ -1,0 +1,44 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+platform :ios, '8.0'
+#use_frameworks!
+
+def myPods
+    
+    inhibit_all_warnings!#在全局指定不显示所有所引用的库中的警告信息
+    
+    pod 'AFNetworking', '~> 3.1.0'
+    pod 'FMDB', '~> 2.6.2'
+    #pod 'JSPatch', '~> 1.1.2'
+    pod 'Masonry', '~> 1.0.2'
+    pod 'MBSwitch', '~> 0.0.1'
+    pod 'MJExtension', '~> 3.0.13'
+    #pod 'MJRefresh', '~> 3.1.12'
+    pod 'RegexKitLite', '~> 4.0'
+    pod 'SBJson', '~> 2.2.3'
+    pod 'SDWebImage', '~> 4.0.0'
+    pod 'TYAttributedLabel', '~> 2.6.2'
+    pod 'YYCache', '~> 1.0.4'
+    pod 'YYModel', '~> 1.0.4'
+    pod 'YYText', '~> 1.0.7'
+    # 微信SDK
+    pod 'WechatOpenSDK', '~> 1.8.0'
+    pod 'ZBarSDK', '~> 1.3.1'
+    pod 'CocoaLumberjack', '~> 3.2.0'
+    pod 'BlocksKit', '~> 2.2.5'
+    pod 'ZipArchive'
+    pod 'QBImagePickerController'
+    pod 'CWStatusBarNotification', '~> 2.3.5'
+
+    
+end
+
+target 'concean' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for concean
+  
+  myPods
+  
+end

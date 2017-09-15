@@ -1,0 +1,35 @@
+//
+// Prefix header for all source files of the 'SMZDM' target in the 'SMZDM' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+
+
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "SMConstant.h"
+#import "SMConstantType.h"
+#import "SMConstantHeader.h"
+#import "SMConstantUI.h"
+//#import "SMConstantUrl.h"
+//#import "SMConstantColor.h"
+#import "SMConstantFont.h"
+#import <JavaScriptCore/JavaScriptCore.h>
+#import "SMUserMacroHeader.h"
+
+
+#endif
+
+#ifdef DEBUG
+//    #define NSLog(format, ...) NSLog(format, ## __VA_ARGS__)
+    #define NSLog(FORMAT, ...) fprintf(stderr, "\n%s:%zd\t%s\n", [[[NSString stringWithUTF8String: __FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat: FORMAT, ## __VA_ARGS__] UTF8String]);
+#else
+    #define NSLog(format, ...)
+#endif
